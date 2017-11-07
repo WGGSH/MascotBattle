@@ -6,9 +6,6 @@ class Input final : public Singleton<Input> {
 	Input() = default;
 	friend Singleton<Input>;
 private:
-	int mousePressCount; // マウスがクリックされ続けたフレーム数
-	int mouseReleaseCount; // マウスが離され続けたフレーム数
-
 	int keyPresseCount[Define::KEY_MAX]; // キーが入力され続けたフレーム数
 	int keyReleaseCount[Define::KEY_MAX]; // キーが離され続けたフレーム数
 

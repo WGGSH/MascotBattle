@@ -4,17 +4,6 @@
 
 // 入力情報の更新
 void Input::update() {
-
-	// マウスの入力状態を取得
-	if (DxLib::GetMouseInput() & MOUSE_INPUT_LEFT) {
-		if (this->mouseReleaseCount>0)this->mouseReleaseCount = 0;
-		this->mousePressCount++;
-	}
-	else {
-		if (this->mousePressCount>0)this->mousePressCount = 0;
-		this->mouseReleaseCount++;
-	}
-
 	// 全てのキーの入力状態を取得
 	char keys[Define::KEY_MAX];
 	DxLib::GetHitKeyStateAll(keys);
@@ -34,7 +23,11 @@ void Input::update() {
 
 #ifdef _DEBUG
 	// デバック時:入力情報を表示
-	DxLib::printfDx("%d:%d\n", this->mousePressCount, this->mouseReleaseCount);
+	for (int i = 0; i < Define::KEY_MAX; i++) {
+		if (this->keyPresseCount[i] >= 1) {
+			printfDx("%d:%d ", i, this->keyPresseCount[i]);
+		}
+	}
 #endif
 }
 

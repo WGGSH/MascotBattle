@@ -1,6 +1,7 @@
 #include "./DxLib.h"
 
 #include "Scene.h"
+#include "Input.h"
 
 // プログラムは WinMain から始まります
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
@@ -20,9 +21,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	while (true) {
 		if (DxLib::ProcessMessage() == -1)break; // プロセス処理
 		if (DxLib::CheckHitKey(KEY_INPUT_ESCAPE))break; // ESCキーでゲーム終了
-
 		// ウィンドウに表示されている内容を削除する
 		DxLib::ClearDrawScreen();
+		// 入力状態の取得
+		Input::Instance()->update();
 
 		// ↓ここにメイン処理 
 		Scene::Instance()->update();
