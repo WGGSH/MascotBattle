@@ -10,9 +10,9 @@ private:
 	std::vector<BaseScene*> sceneList;
 public:
 	void pop();
+	void clear();
 	void push(BaseScene*);
-	void update();
-	void draw();
+	bool update();
 };
 
 #include "Scene/Title.h"
