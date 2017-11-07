@@ -16,7 +16,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	// while“à‚Ìˆ—‚ÍŒ´‘¥–ˆ•b60‰ñÀs‚³‚ê‚é
 	while (SystemManager::Instance()->processLoop()) {
 		// «‚±‚±‚ÉƒƒCƒ“ˆ— 
-		Scene::Instance()->update();
+		if (Scene::Instance()->update() == false)break;
 	}
 
 	// I—¹ˆ—

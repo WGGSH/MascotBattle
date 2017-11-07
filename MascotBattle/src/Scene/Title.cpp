@@ -12,8 +12,10 @@ Title::~Title() {
 }
 
 bool Title::update() {
-	if (Input::Instance()->getButton(PLAYER::PLAYER_1, INPUTBUTTON::SHOT)) {
+	if (Input::Instance()->getButton(PLAYER_1, SHOT)) {
 		Scene::Instance()->push(new InGame());
+	}
+	if (Input::Instance()->getButton(PLAYER_1, BOM)) {
 		return false;
 	}
 	return true;
