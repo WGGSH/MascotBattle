@@ -21,10 +21,12 @@
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Resource.cpp" />
+    <ClCompile Include="src\Scene.cpp" />
     <ClCompile Include="src\Vec3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Resource.h" />
+    <ClInclude Include="src\Scene.h" />
     <ClInclude Include="src\Singleton.h" />
     <ClInclude Include="src\Vec3.h" />
   </ItemGroup>
