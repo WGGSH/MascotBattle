@@ -33,6 +33,7 @@ bool SystemManager::processLoop() {
 	if (DxLib::ClearDrawScreen() == -1)isSuccess = false;
 	if (DxLib::ProcessMessage() == -1)isSuccess = false;
 	Input::Instance()->update();
+	if (Input::Instance()->getKeyDown(KEY_INPUT_ESCAPE))isSuccess = false;
 
 	return isSuccess;
 }
