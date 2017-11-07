@@ -20,6 +20,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Vec3.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Vec3.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{a940024c-e55e-4809-88af-efcef3f30717}</ProjectGuid>
