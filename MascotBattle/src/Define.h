@@ -2,6 +2,7 @@
 
 // 定数クラス
 class Define final {
+public:
 	// ウィンドウサイズ
 	const static int WINDOW_WIDTH;
 	const static int WINDOW_HEIGHT;
