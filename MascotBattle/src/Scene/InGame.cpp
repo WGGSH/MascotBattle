@@ -8,6 +8,9 @@ InGame::InGame() {
 InGame::~InGame() {
 }
 
+void InGame::initialize() {
+}
+
 bool InGame::update() {
 	return true;
 }

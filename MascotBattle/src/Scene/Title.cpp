@@ -11,6 +11,9 @@ Title::Title() {
 Title::~Title() {
 }
 
+void Title::initialize() {
+}
+
 bool Title::update() {
 	if (Input::Instance()->getButton(PLAYER_1, SHOT)) {
 		Scene::Instance()->push(new InGame());

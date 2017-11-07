@@ -7,6 +7,7 @@ public:
 	Title();
 	virtual ~Title();
 
+	void initialize()override;
 	bool update() override;
 	void draw()const override;
 };

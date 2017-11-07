@@ -14,11 +14,13 @@ bool Scene::update() {
 // ポップ
 void Scene::pop() {
 	this->sceneList.pop_back();
+	this->sceneList.back()->initialize();
 }
 
 // プッシュ
 void Scene::push(BaseScene* scene) {
 	this->sceneList.push_back(scene);
+	this->sceneList.back()->initialize();
 }
 
 void Scene::clear() {

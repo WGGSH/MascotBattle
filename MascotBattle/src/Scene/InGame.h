@@ -7,6 +7,7 @@ public:
 	InGame();
 	virtual ~InGame();
 
+	void initialize() override;
 	bool update() override;
 	void draw()const override;
 };
