@@ -9,7 +9,7 @@ void Scene::update() {
 }
 
 void Scene::pop() {
-	this->sceneList.pop_back();
+	this->sceneList.erase(this->sceneList.begin());
 }
 
 void Scene::push(BaseScene* scene) {

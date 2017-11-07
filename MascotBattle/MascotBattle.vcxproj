@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Define.cpp" />
+    <ClCompile Include="src\Scene\InGame.cpp" />
     <ClCompile Include="src\SystemManager.cpp" />
     <ClCompile Include="src\Input.cpp" />
     <ClCompile Include="src\main.cpp" />
@@ -33,6 +34,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Define.h" />
+    <ClInclude Include="src\Scene\InGame.h" />
     <ClInclude Include="src\SystemManager.h" />
     <ClInclude Include="src\Input.h" />
     <ClInclude Include="src\Resource.h" />

@@ -19,6 +19,9 @@
     <Filter Include="ヘッダー ファイル\Scene">
       <UniqueIdentifier>{998308e0-eacf-49e7-8e96-db5d189df7b7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Scene\InGame">
+      <UniqueIdentifier>{c50d8831-685d-49d3-9fec-b12b5b4bc8b1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -54,6 +57,9 @@
     <ClCompile Include="src\SystemManager.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="src\Scene\InGame.cpp">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Vec3.h">
@@ -85,6 +91,9 @@
     </ClInclude>
     <ClInclude Include="src\SystemManager.h">
       <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Scene\InGame.h">
+      <Filter>ヘッダー ファイル\Scene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
