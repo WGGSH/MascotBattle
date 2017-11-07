@@ -1,7 +1,7 @@
-// --- Input.cpp ---
 #include "Input.h"
 #include "DxLib.h"
 
+// “ü—ÍŠ„“–‚Ì‰Šú‰»ˆ—
 void Input::setup() {
 	this->padNum = DxLib::GetJoypadNum();
 

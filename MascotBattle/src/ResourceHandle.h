@@ -8,6 +8,7 @@ enum RESOURCE_TYPE {
 	SOUND = 2,
 };
 
+// リソースの情報
 struct ResourceHandle {
 	int handle;  // DxLibの関数で読み込んだhandle
 	RESOURCE_TYPE type; // リソースの種類(画像/モデル/サウンド)

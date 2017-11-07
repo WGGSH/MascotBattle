@@ -14,7 +14,10 @@ bool Scene::update() {
 // ポップ
 void Scene::pop() {
 	this->sceneList.pop_back();
-	this->sceneList.back()->initialize();
+	if (!this->sceneList.empty()) {
+		// シーンリストがからでなければ，最上位のシーンを初期化する
+		this->sceneList.back()->initialize();
+	}
 }
 
 // プッシュ

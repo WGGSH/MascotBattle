@@ -1,4 +1,5 @@
 #include "SystemManager.h"
+#include "Scene.h"
 #include "Input.h"
 
 #include "./DxLib.h"
@@ -19,9 +20,21 @@ bool SystemManager::initialize() {
 	// DxLib_Init以降の初期化処理
 	if (DxLib::SetDrawScreen(DX_SCREEN_BACK) == -1)isSuccess = false;
 
+	// 入力装置の初期化
 	Input::Instance()->setup();
 
+	// シーン登録
+	Scene::Instance()->push(new Title());
+
 	return isSuccess;
+}
+
+// メインループ
+bool SystemManager::update() {
+	while (this->processLoop()) {
+		if (Scene::Instance()->update() == false)break;
+	}
+	return true;
 }
 
 // メインループに必要なプロセス処理

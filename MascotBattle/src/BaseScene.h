@@ -1,5 +1,6 @@
 #pragma once
 
+// 全てのシーンの基底クラス
 class BaseScene {
 private:
 public:

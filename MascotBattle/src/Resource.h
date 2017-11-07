@@ -1,8 +1,8 @@
 #pragma once
 
-#include <vector>
 #include "Singleton.h"
 #include "ResourceHandle.h"
+#include <vector>
 class Resource : public Singleton<Resource> {
 	Resource() = default;
 	friend Singleton<Resource>;

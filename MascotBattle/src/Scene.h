@@ -16,3 +16,4 @@ public:
 };
 
 #include "Scene/Title.h"
+#include "Scene/InGame.h"

@@ -1,19 +1,17 @@
 #pragma once
-// Vec3 Class
 
-#include "./DxLib.h"
 #include <string>
+#include "./DxLib.h"
 
+// 3Dベクトルクラス
+// DxLibのVECTORを継承
 struct Vec3 : public VECTOR {
-	/*float x;
-	float y;
-	float z;*/
 
 	Vec3();
 	Vec3(float, float, float);
 	virtual ~Vec3();
 
-	// method
+	// メソッド
 	float dotProduct(const Vec3&) const; // 内積
 	Vec3 crossProduct(const Vec3&) const; // 外積
 	float length() const; // 長さ
@@ -21,14 +19,14 @@ struct Vec3 : public VECTOR {
 	Vec3 normalized() const; // 正規化ベクトルを返す
 	std::string getStr() const; // 文字列にして返す
 
-
+	// 自身を変化させるメソッド
 	Vec3 normalize(); // 正規化する
 	void rotateX(float); // X軸回転
 	void rotateY(float); // Y軸回転
 	void rotateZ(float); // Z軸回転
 	void rotateAxis(const Vec3 &, float); // 任意軸周りの回転
 
-										  // operator
+	// operator
 	Vec3 operator+(const Vec3 &) const; // Vec3 + Vec3
 	Vec3 operator-(const Vec3 &) const; // Vec3 - Vec3
 	Vec3 operator*(float)const;					// Vec3 * float
