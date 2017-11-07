@@ -19,6 +19,8 @@ bool SystemManager::initialize() {
 	// DxLib_InitˆÈ~‚Ì‰Šú‰»ˆ—
 	if (DxLib::SetDrawScreen(DX_SCREEN_BACK) == -1)isSuccess = false;
 
+	Input::Instance()->setup();
+
 	return isSuccess;
 }
 
