@@ -1,6 +1,6 @@
 #include "./DxLib.h"
 
-#include "Vec3.h"
+#include "Scene.h"
 
 // プログラムは WinMain から始まります
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
@@ -12,11 +12,29 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		return -1;			// エラーが起きたら直ちに終了
 	}
 
-	DrawPixel(320, 240, GetColor(255, 255, 255));	// 点を打つ;
-	Vec3 vec2 = { 4,5,6 };
-	DrawFormatString(0, 0, 0xffffff, "%s", vec2.getStr().c_str());
+	// シーン登録
+	Scene::Instance()->push(new Title());
 
-	WaitKey();				// キー入力待ち
+	// メインループ 
+	// while内の処理は原則毎秒60回実行される
+	while (true) {
+		if (DxLib::ProcessMessage() == -1)break; // プロセス処理
+		if (DxLib::CheckHitKey(KEY_INPUT_ESCAPE))break; // ESCキーでゲーム終了
+
+		// ウィンドウに表示されている内容を削除する
+		DxLib::ClearDrawScreen();
+
+		// ↓ここにメイン処理 
+		Scene::Instance()->update();
+
+		 // 描画内容をウィンドウに反映させる
+		DxLib::ScreenFlip();
+
+#ifdef _DEBUG
+		// デバック時:デバック用の表示情報を削除
+		DxLib::clsDx();
+#endif
+	}
 
 	DxLib_End();				// ＤＸライブラリ使用の終了処理
 
