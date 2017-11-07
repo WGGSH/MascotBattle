@@ -9,5 +9,6 @@ class Define final {
 	// ResourceHandle
 
 
-
+	// Input.h
+	const static int KEY_MAX = 256; // ƒL[‚Ì”
 };
